@@ -32,9 +32,6 @@ export default async function Home() {
             place, and keep your links organized for every campaign.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <SignUpButton mode="modal">
-              <Button size="lg">Get Started Free</Button>
-            </SignUpButton>
             <SignInButton mode="modal">
               <Button variant="outline" size="lg">Sign In</Button>
             </SignInButton>
