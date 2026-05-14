@@ -9,9 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { JSX } from "react";
 
-export default async function Home(): Promise<JSX.Element> {
+export default async function Home() {
   const { userId } = await auth();
 
   if (userId) {
