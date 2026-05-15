@@ -1,4 +1,6 @@
-# Authentication Guide
+---
+description: Read this before implementing or modifying authentication in the project.
+---
 
 ## Scope
 

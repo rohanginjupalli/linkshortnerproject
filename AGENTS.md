@@ -4,34 +4,6 @@
 
 This is a **Next.js 16 URL Shortener** application with user authentication via Clerk and database management via Drizzle ORM. These instructions define coding standards, project structure, and best practices for LLMs working on this codebase.
 
-## Quick Start for Agents
-
-1. **Read the relevant guide** in `/docs` before implementing features
-2. **Follow the code standards** in [docs/code-standards.md](docs/code-standards.md)
-3. **Understand the project structure** in [docs/project-structure.md](docs/project-structure.md)
-4. **Use proper patterns** from [docs/component-patterns.md](docs/component-patterns.md)
-5. **Check troubleshooting** in [docs/troubleshooting.md](docs/troubleshooting.md) if you encounter issues
-
-## Documentation Index
-
-All project documentation is in the `/docs` directory. Read the most relevant guide before making changes, and keep new instructions split into focused markdown files under `/docs`.
-
-- [docs/authentication-guide.md](docs/authentication-guide.md) - Clerk-only auth rules and route protection for this app
-- [docs/component-patterns.md](docs/component-patterns.md) - shadcn/ui-only UI component usage and composition rules
-
-## Key Technology Stack
-
-| Technology | Version | Purpose |
-|---|---|---|
-| **Next.js** | 16.2.6 | App Router framework |
-| **React** | 19.2.4 | UI library |
-| **TypeScript** | ^5 | Type safety |
-| **Drizzle ORM** | ^0.45.2 | Database ORM |
-| **Clerk** | ^7.3.3 | Authentication |
-| **Tailwind CSS** | ^4 | Styling |
-| **shadcn/ui** | ^4.7.0 | UI components |
-
-## Critical Rules for Agents
 
 ### ❌ DO NOT
 
@@ -189,19 +161,12 @@ export function MyComponent({ onSubmit }: MyComponentProps) {
 }
 ```
 
-## Agent Workflow
-
-When implementing a feature, follow this workflow:
-
-1. **Read the relevant guide** from `/docs` for the area you're working in
-2. **Check existing patterns** in [component-patterns.md](docs/component-patterns.md)
-3. **Plan the implementation** based on standards in [code-standards.md](docs/code-standards.md)
-4. **Create/modify files** following [project-structure.md](docs/project-structure.md)
-5. **Test with** `npm run build` and `npm run lint`
-6. **Check console for errors** in the dev server
-7. **Review the code** against the standards one more time
 
 ## Important Notes
+
+### Instruction Files
+
+- See `.github/instructions/server-action-mutations.instructions.md` for required mutation architecture: Server Actions for all mutations, Zod validation, auth-first checks, and `/data` helper usage (no direct Drizzle queries in actions).
 
 ### Next.js Breaking Changes
 
@@ -252,20 +217,3 @@ npm run dev
 npx drizzle-kit studio
 ```
 
-## Getting Help
-
-1. Check the relevant guide in `/docs` directory
-2. Search [troubleshooting.md](docs/troubleshooting.md) for your issue
-3. Review examples in [component-patterns.md](docs/component-patterns.md)
-4. Check the Next.js, Drizzle, or Clerk documentation links in the guides
-
-## Summary
-
-- **Code Standards**: [docs/code-standards.md](docs/code-standards.md)
-- **Project Structure**: [docs/project-structure.md](docs/project-structure.md)
-- **Authentication**: [docs/authentication-guide.md](docs/authentication-guide.md)
-- **Database**: [docs/database-guide.md](docs/database-guide.md)
-- **Components**: [docs/component-patterns.md](docs/component-patterns.md)
-- **Troubleshooting**: [docs/troubleshooting.md](docs/troubleshooting.md)
-
-All agent work should adhere to these standards and follow the patterns documented in `/docs`.
