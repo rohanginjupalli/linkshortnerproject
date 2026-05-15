@@ -30,7 +30,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ClerkProvider>
+        <ClerkProvider
+        signInFallbackRedirectUrl="/dashboard"
+        signUpFallbackRedirectUrl="/dashboard"
+        >
           <header className="flex items-center justify-end gap-3 border-b border-border bg-background/80 px-6 py-4 text-sm backdrop-blur">
             <Show when="signed-out">
               <SignInButton mode="modal">
